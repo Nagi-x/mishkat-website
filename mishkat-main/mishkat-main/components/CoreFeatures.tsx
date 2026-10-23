@@ -1,8 +1,6 @@
 "use client";
 
-"use client";
-
-import { MonitorPlay, Users, ShieldCheck, Sparkles } from "lucide-react";
+import { MonitorPlay, Users, Sparkles } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function CoreFeatures() {
@@ -27,15 +25,6 @@ export default function CoreFeatures() {
       iconBg: "bg-[#0f2b5c]",
       icon: Users,
     },
-    {
-      id: 3,
-      title: t.features.f3Title,
-      description: t.features.f3Desc,
-      bgColor: "bg-[#fefce8]",
-      borderColor: "border-[#fef08a]",
-      iconBg: "bg-[#ca8a04]",
-      icon: ShieldCheck,
-    },
   ];
 
   return (
@@ -54,7 +43,7 @@ export default function CoreFeatures() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
